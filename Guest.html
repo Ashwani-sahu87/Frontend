@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guest Entry</title>
+    <style>
+        
+form {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    
+}
+
+h1 {
+    text-align: center;
+    margin: 0%;
+    padding-top: 0px;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    
+}
+th{
+    font-weight: lighter;
+    font-family: 'Times New Roman';
+    font-size:small;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+  
+
+#MobileNumber {
+    float: right;
+    width: 75%;
+}
+#CCode {
+    width: 25%;
+    
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="div1">
+        <H1>New Guest Entry</H1>
+    </div>
+    
+    <form action="">
+    
+   <table>
+    <tr>
+        <th>Reg No</th>
+        <th>Invoice No</th>
+        <th>Log No</th>
+    </tr>
+    <tr>
+        <td><input type="number" name="reg" id="Reg"></td>
+        <td><input type="number" name="invoice" id="Invoice"></td>
+        <td><input type="number" name="log" id="Log"></td>
+    </tr>
+    
+    <tr>
+        <th>Check In</th>
+        <th>Expected Check Out</th>
+        <th>Room Type</th>
+    </tr>
+    <tr>
+        <td><input type="date" id="Check" name="Check" required></td>
+        <td><input type="date" name="checkOut" id="CheckOut" required></td>
+        <td><select id="Roomtype" name="roomtype">
+            <option selected disabled>Choose Room type</option>
+            <option value="Presidential suite
+">Presidential suite</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Double double room">Double double room</option>
+            <option value="Penthouse room">Penthouse room</option>
+            <option value="Quad bedroom">Quad bedroom</option>
+           
+            
+        </select></td>
+    </tr>
+    
+    <tr>
+        <th>Meal Plan</th>
+        <th>Room Number</th>
+        <th>Guest Basis</th>
+    </tr>
+    <tr>
+        <td><select id="Meal" name="MealPlan">
+            <option selected disabled>Choose Meal Plan</option>
+            <option value="Panjabi">Panjabi</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="South Indian">South Indian</option>
+            <option value="Rajsthani">Rajsthani</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Italian">Italian</option>
+            <option value="Thai">Thai</option>
+            <option value="French">French</option>
+            <option value="Japanese">Japanese</option>
+        </select></td>
+        <td><input type="number" id="Rnumber" name="Room Number" required></td>
+        <td><select id="guestBasis" name="GuestBasis">
+            <option selected disabled>Choose...</option>
+            <option value="Direct Booking">Direct Booking</option>
+            <option value="Onlie Booking">Online Booking</option>
+            <option value="By Broker">By Broker</option>
+        </select></td>
+        
+            
+        
+    </tr>
+    <tr>
+        <th>Guest Type</th>
+        <th>Bill to</th>
+        <th>Company Name</th>
+    </tr>
+    <tr>
+        <td><select id="Guesttype " name="GuestType">
+            <option selected disabled>Choose Your Guest Type</option>
+            <option value="Tourist">Tourist</option>
+            <option value="Local">Local</option>
+            <option value="International">International</option>
+        </select></td>
+        <td>
+            <input type="radio" name="Bill to" value="Customer" onchange="changeData">Customer
+            <input type="radio"name="Bill to" value="Company" onchange="changeData">Company
+        </td>
+        
+        <td><input type="text" name="Company Name" id="CompanyName" placeholder="Company Name"></td>
+        
+        
+            
+        
+    </tr>
+    <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Name" name="Full Name" required></td>
+        <td><input type="email" name="Email" id="EmailId" required></td>
+        <td colspan="3">
+            <select id="CCode" name="Country Code">
+                <option selected disabled>--Choose--</option>
+                <option value="India">+91</option>
+                <option value="pakistan">+92</option>
+                <option value="United State">+1</option>
+                <option value="Iran">+98</option>
+                <option value="Indonesia">+62</option>
+                <option value="Hong Kong">+852</option>
+                <option value="France">+33</option>
+                <option value="Egypt">+20</option>
+                <option value="China">+86</option>
+                <option value="Brazil">+55</option>
+            </select>
+            <input type="number" name="MNumber" id="MobileNumber" required  maxlength="10">
+        </td>
+    </tr>
+
+    <tr>
+        <th>WP/NID</th>
+        <th>Passport Number</th>
+        <th>Nationality</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="WP" name="WP/NID"></td>
+        <td><input type="text" id="Passport" name="PassportNo."></td>
+        <td><select id="Nationality" name="Nationality">
+            <option selected disabled>--Select one--</option>
+            <option value="Indian">Indian</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="China">China</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+
+        </select></td>
+    </tr>
+
+    <tr>
+        <th>Country Of Residence</th>
+        <th>Date Of Birth</th>
+        <th>Profession</th>
+       
+    </tr>
+    <tr>
+        <td><select id="Rsisdence" name="Residence">
+            <option selected disabled>--Select one--</option>
+            <option value="Indian">Indian</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="China">China</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            
+
+        </select></td>
+        <td><input type="date" name="DOB" id="DOB"></td>
+        <td><input type="text" name="Profession" id="Profession"></td>
+
+    </tr>
+
+    <tr>
+        <th>No.of Pax</th>
+        <th>Group</th>
+        <th>Upload Id</th>
+       
+    </tr>
+    <tr>
+       
+        <td><input type="number" name="No. of pax" id="No. of pax"></td>
+        <td><select name="Group" id="Group">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select></td>
+        <td><input type="file" name="Upload" id="Upload"></td>
+
+    </tr>
+
+
+
+   </table>
+   <button>Add More Guest</button>
+
+   </form>
+
+   <script>
+    function changeData() {
+        var companyNameInput = document.getElementById("CompanyName");
+
+        if (document.getElementsByName("Bill to")[0].checked) {
+            companyNameInput.disabled = true;
+        } else {
+            companyNameInput.disabled = false;
+        }
+    }
+</script>
+   
+    
+</body>
+</html>
